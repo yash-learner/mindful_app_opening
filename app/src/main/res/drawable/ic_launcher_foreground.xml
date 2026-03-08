@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Meditation person silhouette -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M54,30 C57.3,30 60,27.3 60,24 C60,20.7 57.3,18 54,18 C50.7,18 48,20.7 48,24 C48,27.3 50.7,30 54,30 Z M40,54 L44,54 L44,84 L50,84 L50,66 L58,66 L58,84 L64,84 L64,54 L68,54 L66,42 C65,38 62,36 58,36 L50,36 C46,36 43,38 42,42 Z" />
+</vector>
