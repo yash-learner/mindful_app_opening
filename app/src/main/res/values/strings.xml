@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mindful</string>
+    <string name="app_subtitle">Be intentional with your time</string>
+
+    <string name="desc_permissions_intro">Two permissions are needed for Mindful to work:</string>
+
+    <!-- Main screen -->
+    <string name="btn_my_todos">My Todo List</string>
+    <string name="btn_select_apps">Select Trigger Apps</string>
+    <string name="btn_setup_permissions">Setup Permissions</string>
+    <string name="status_permissions_ok">✓ All permissions granted — service is active</string>
+    <string name="status_permissions_needed">⚠ Permissions required — tap Setup Permissions</string>
+
+    <!-- Todo screen -->
+    <string name="title_todos">Today\'s Todos</string>
+    <string name="hint_new_todo">Add a new task…</string>
+    <string name="btn_add">Add</string>
+    <string name="empty_todos">No todos yet.\nTap + to add your first task!</string>
+
+    <!-- App selection screen -->
+    <string name="title_select_apps">Select Trigger Apps</string>
+    <string name="hint_select_apps">Toggle the apps that should show your todo list when opened</string>
+
+    <!-- Onboarding / permissions screen -->
+    <string name="title_permissions">Setup Permissions</string>
+    <string name="label_overlay_permission">Draw Over Other Apps</string>
+    <string name="desc_overlay_permission">Required to display the todo overlay above selected apps.</string>
+    <string name="label_accessibility_permission">Accessibility Service</string>
+    <string name="desc_accessibility_permission">Required to detect when you open a selected app.\n\nIn Accessibility Settings, find \"Mindful\" and enable it.</string>
+    <string name="granted">✓ Granted</string>
+    <string name="grant">Grant</string>
+    <string name="all_done_message">All done! The service is now active.</string>
+    <string name="btn_done">Done</string>
+
+    <!-- Overlay screen -->
+    <string name="overlay_title">Before you continue…</string>
+    <string name="overlay_subtitle">Here are your tasks for today:</string>
+    <string name="overlay_empty_todos">No active todos for today!\nYou\'re all clear. 🎉</string>
+    <string name="btn_continue_to_app">Continue to App</string>
+    <string name="btn_go_home">Go Home Instead</string>
+
+    <!-- Accessibility service metadata -->
+    <string name="accessibility_service_label">Mindful App Monitor</string>
+    <string name="accessibility_service_description">Mindful monitors app launches to show your todo list before you open selected apps, helping you stay intentional with your time.</string>
+</resources>

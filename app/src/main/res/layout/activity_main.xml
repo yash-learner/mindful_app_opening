@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".ui.main.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- App icon / logo area -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🧘"
+            android:textSize="64sp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_subtitle"
+            android:textSize="14sp"
+            android:alpha="0.6"
+            android:layout_marginBottom="32dp" />
+
+        <!-- Permission status card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardPermissionStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="12dp"
+            app:strokeWidth="1.5dp"
+            app:strokeColor="@color/warning_orange">
+
+            <TextView
+                android:id="@+id/tvPermissionStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:textSize="13sp"
+                android:gravity="center"
+                tools:text="@string/status_permissions_needed" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Navigation buttons -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTodos"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/btn_my_todos"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"
+            app:icon="@drawable/ic_checklist"
+            app:iconGravity="textStart"
+            app:cornerRadius="12dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSelectApps"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/btn_select_apps"
+            android:textSize="16sp"
+            android:layout_marginBottom="12dp"
+            app:icon="@drawable/ic_apps"
+            app:iconGravity="textStart"
+            app:cornerRadius="12dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPermissions"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="@string/btn_setup_permissions"
+            android:textSize="16sp"
+            app:icon="@drawable/ic_settings"
+            app:iconGravity="textStart"
+            style="@style/Widget.Material3.Button.TextButton" />
+
+    </LinearLayout>
+</ScrollView>

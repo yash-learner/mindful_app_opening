@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Overlay layout: displayed above the selected app using WindowManager.
+    Uses a dark full-screen background with a centered card showing todos.
+    Must work without an Activity context (inflated by a Service).
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/overlay_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:padding="24dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/overlay_title"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/overlay_text_primary"
+            android:gravity="center"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/overlay_subtitle"
+            android:textSize="14sp"
+            android:textColor="@color/overlay_text_secondary"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="48dp"
+            android:layout_height="2dp"
+            android:background="@color/overlay_divider"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Todo list (scrollable) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOverlayTodos"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp" />
+
+        <!-- Empty state -->
+        <TextView
+            android:id="@+id/tvOverlayEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="@string/overlay_empty_todos"
+            android:textColor="@color/overlay_text_secondary"
+            android:textSize="15sp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <!-- Action buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/btnContinue"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/btn_continue_to_app"
+                android:textColor="@color/black"
+                android:backgroundTint="@color/teal_200"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnGoHome"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="@string/btn_go_home"
+                android:textColor="@color/overlay_text_primary"
+                android:backgroundTint="@color/overlay_divider" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
